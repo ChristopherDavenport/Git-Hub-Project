@@ -1,0 +1,27 @@
+if i < j && false then
+   (
+	if j > i then 5 else 6
+	)
+
+else
+begin
+let f = 3 in
+f+4
+end;;
+
+
+for variable = star_value to end_value do
+    expression
+done
+
+for variable = start_value downto end_value do
+    expression
+    done
+
+while boolean-condition do
+      expression
+done
+while !x < 10 do
+  print_string "poopers\n";
+  x := !x + 1;
+  done;;
