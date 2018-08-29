@@ -47,7 +47,7 @@
  *******************************************************************)
 
 
- #use "parser.ml";;
+#use "parser.ml"
 
 
 (*******************************************************************
@@ -67,19 +67,18 @@ and ast_s =
 and ast_e =
     | AST_binop of (string * ast_e * ast_e)
     | AST_id of string
-    | AST_num of string;;
+    | AST_num of string
+|AST;;
 
 	
 let rec ast_ize_P (p:parse_tree) : ast_sl =
-  (* your code should replace the following line *)
-  []
+  | PT_nt ("S", []) -> []
+  | []
 
 and ast_ize_SL (sl:parse_tree) : ast_sl =
   match sl with
     | PT_nt ("SL", []) -> []
-(*
-your code here ...
-*)
+    | 
     | _ -> raise (Failure "malformed parse tree in ast_ize_SL")
 
 and ast_ize_S (s:parse_tree) : ast_s =
